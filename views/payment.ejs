@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="<<FORM_URL>>" id="payment_form">
+        <input type="hidden" name="EWAY_ACCESSCODE" value="<<ACCESS_CODE>>" />
+        <input type="hidden" name="EWAY_PAYMENTTYPE" value="Credit Card" />
+        Card Name: <input type="text" value="eWAY test" name="EWAY_CARDNAME" />
+        Card Number: <input type="text" value='4444333322221111' name="EWAY_CARDNUMBER" />
+        Card Expiry Month: <input type="text" value="08" name="EWAY_CARDEXPIRYMONTH" />
+        Card Expiry Year: <input type="text" value="22" name="EWAY_CARDEXPIRYYEAR" />
+        Card CVN: <input type="text" value="123" name="EWAY_CARDCVN" />
+        <input type="submit" value="Process" text="Process" />
+      </form>
+</body>
+</html>
