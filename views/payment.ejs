@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="<<FORM_URL>>" id="payment_form">
-        <input type="hidden" name="EWAY_ACCESSCODE" value="<<ACCESS_CODE>>" />
+    <!-- <form method="POST" action="https://secure-au.sandbox.ewaypayments.com/AccessCode/A1001ptMujUsg-jbfQnxdjkvcNWT_QcVlTTjelHVcF-nPzuvpbI8gimb5mw7WUhjLgWAeJdc1_OT5TN5zpzp5NjlzuN6vZdEd8gNnTCmlbC8357kvDpizfAb2-f9mzEZ4K6J7tCUrKR2tSgiKWu7GS5FTRw==" id="payment_form">
+        <input type="hidden" name="EWAY_ACCESSCODE" value="A1001ptMujUsg-jbfQnxdjkvcNWT_QcVlTTjelHVcF-nPzuvpbI8gimb5mw7WUhjLgWAeJdc1_OT5TN5zpzp5NjlzuN6vZdEd8gNnTCmlbC8357kvDpizfAb2-f9mzEZ4K6J7tCUrKR2tSgiKWu7GS5FTRw==" />
         <input type="hidden" name="EWAY_PAYMENTTYPE" value="Credit Card" />
         Card Name: <input type="text" value="eWAY test" name="EWAY_CARDNAME" />
         Card Number: <input type="text" value='4444333322221111' name="EWAY_CARDNUMBER" />
@@ -15,6 +15,26 @@
         Card Expiry Year: <input type="text" value="22" name="EWAY_CARDEXPIRYYEAR" />
         Card CVN: <input type="text" value="123" name="EWAY_CARDCVN" />
         <input type="submit" value="Process" text="Process" />
-      </form>
+    </form> -->
+    <form action="/pay" method="POST" data-eway-encrypt-key="xG3WkjyDL486j8A619YWxrbAzPq2hR6GV9bM1ER+DVGAD9zdaPvj9ReGaHJfq/uSWlfTXxPI0Wuh3HgvdnqCG9u339nMOU3B/JUocmE/fX1dIYeDP6cTmEIwSkRiYBJnEOp/vwiX/dLeI28nRNsOMRdHGS8BAmDjuzPlL50VDHx2mYyx46IJ9C8I8NIdSzGWt5yKv9H0CTokAdSp8S2iachD6vhwdBsJgNIihcmsyOBZjA+WNNZlHKht+ahDaXtsmnyUAo7g/nfUNeWCYxPzBPR92i2BwQhAbj3aHvgvdjUcfika7f2tzNFWXkE3hfzCWuRjp036d7IJx4UBSxOVJw==">
+        <label>Card Name</label>
+         <input type="text" value="anant" name="EWAY_CARDNAME" />
+         
+         <label>Card Number</label>
+         <input type="text" value="4444333322221111" data-eway-encrypt-name="EWAY_CARDNUMBER" />
+         
+         <label>Expiry Month</label>
+         <input type="number" value="08" name="EWAY_CARDEXPIRYMONTH" />
+         
+         <label>Expiry Year</label>
+         <input type="number" value="2025" name="EWAY_CARDEXPIRYYEAR" />
+         
+         <label>CVV</label>
+         <input type="text" value="412" data-eway-encrypt-name="EWAY_CARDCVN" />
+         
+         <input type="submit" id="submit" />
+       </form>
+       <script src="https://secure.ewaypayments.com/scripts/eCrypt.min.js"></script>
+    
 </body>
 </html>
